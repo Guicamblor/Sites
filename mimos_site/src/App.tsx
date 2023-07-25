@@ -10,7 +10,7 @@ import {
   Clients,
   CTA,
   Footer 
-} from './components'
+} from './components';
 
 
 const App = () => (

@@ -9,6 +9,7 @@ import Stats from "./Stats";
 import Testimonials from "./Testimonials";
 import Main from "./Main";
 import NavBar from "./NavBar";
+import MenuBar from "./cpt_menu";
 
 export {
     NavBar,
@@ -20,5 +21,6 @@ export {
     Stats,
     Footer,
     Testimonials,
-    Main
+    Main,
+    MenuBar,
 }

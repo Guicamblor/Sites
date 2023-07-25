@@ -1,0 +1,33 @@
+.searchInputDiv {
+    position: 'relative';
+    border-radius: 'none';
+    background-color: alpha(white, 0.15);
+    color: alpha(white, 0.25);
+    margin-right: 2;
+    margin-left: 0;
+    width: '100%';
+    margin-left: 3;
+    width: 'auto';
+}
+
+.searchInput {
+    color: 'inherit';
+    padding: 1, 1, 1, 0;
+    padding-left: calc(1em + 4);
+    transition: 'width';
+    width: '20ch';
+}
+
+.searchIcon {
+    padding: 0, 2;
+    height: '100%';
+    position: 'absolute';
+    pointer-events: 'none';
+    display: 'flex';
+    align-items: 'center';
+    justify-content: 'center';
+}
+
+.z-index {
+ z-index: 9999;
+}
