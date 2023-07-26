@@ -28,6 +28,24 @@
     justify-content: 'center';
 }
 
+.backGroudDiv {
+  background-color: "#ECEFF1";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.div-p-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .z-index {
  z-index: 9999;
+}
+
+p {
+  text-align: center;
 }

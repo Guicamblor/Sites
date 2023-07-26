@@ -10,6 +10,7 @@ import Testimonials from "./Testimonials";
 import Main from "./Main";
 import NavBar from "./NavBar";
 import MenuBar from "./cpt_menu";
+import { cardNews } from "./cpt_cardNews";
 
 export {
     NavBar,
@@ -23,4 +24,5 @@ export {
     Testimonials,
     Main,
     MenuBar,
+    cardNews,
 }

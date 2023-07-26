@@ -11,11 +11,13 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+// import AccountCircle from '@mui/icons-material/AccountCircle';
+// import MailIcon from '@mui/icons-material/Mail';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { menuTheme } from '../styles/menuStyles';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -77,7 +79,12 @@ export default function MenuBar() {
   const onCloseMenuClose = () => {
     setAnchorEl(null);
     onCloseMobileMenu();
+    // onProfileCard()
   };
+
+  // const onProfileCard = () => {
+  //   profileCard();
+  // }
 
   const onClickMobileMenu = (event: React.MouseEvent<HTMLElement>) => {
     setMobileMoreAnchorEl(event.currentTarget);
@@ -122,14 +129,14 @@ export default function MenuBar() {
       open={isMobileMenuOpen}
       onClose={onCloseMobileMenu}
     >
-      <MenuItem>
+      {/* <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
             <MailIcon />
           </Badge>
         </IconButton>
         <p>Messages</p>
-      </MenuItem>
+      </MenuItem> */}
       <MenuItem>
         <IconButton
           size="large"
@@ -137,7 +144,7 @@ export default function MenuBar() {
           color="inherit"
         >
           <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
+            <ShoppingCartIcon />
           </Badge>
         </IconButton>
         <p>Notifications</p>
@@ -150,7 +157,10 @@ export default function MenuBar() {
           aria-haspopup="true"
           color="inherit"
         >
-          <AccountCircle />
+          <Stack direction="row" spacing={2} className="profileImage">
+            <Avatar/>
+          </Stack>
+          {/* <AccountCircle /> */}
         </IconButton>
         <p>Profile</p>
       </MenuItem>
@@ -165,7 +175,7 @@ export default function MenuBar() {
               <IconButton
               size="large"
               edge="start"
-              color="default"
+              color="inherit"
               aria-label="open"
               sx={{ mr: 2}}
               >
@@ -189,18 +199,18 @@ export default function MenuBar() {
               </Search>
               <Box sx={{ flexGrow: 1}}/>
               <Box sx={{ display: {xs: 'none', md: 'flex'}}}>
-                <IconButton size="large" aria-label="show 4 new mails" color="default">
+                {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                   <Badge badgeContent={4} color='error'>
                     <MailIcon/>
                   </Badge>
-                </IconButton>
+                </IconButton> */}
                 <IconButton
                 size="large"
                 aria-label="show 17 new notifications"
                 color="inherit"
                 >
                   <Badge badgeContent={17} color="error">
-                    <NotificationsIcon/>
+                    <ShoppingCartIcon />
                   </Badge>
                 </IconButton>
                 <IconButton
@@ -212,7 +222,9 @@ export default function MenuBar() {
                 onClick={onClickMenuProfile}
                 color="inherit"
                 >
-                  <AccountCircle/>
+                  <Stack direction="row" spacing={2} className="profileImage">
+                    <Avatar/>
+                  </Stack>
                 </IconButton>
               </Box>
               <Box sx={{ display: { xs: "flex", md: "none"}}}>

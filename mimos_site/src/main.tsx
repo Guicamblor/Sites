@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 // import App from './App.tsx';
 import './index.css';
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom";
-import Home from './page/home.tsx'
+} from 'react-router-dom';
+import Home from './page/home.tsx';
 
 const router = createBrowserRouter([
   // {
@@ -15,14 +15,15 @@ const router = createBrowserRouter([
   //   element: <App />,
   // },
   {
-    path: "",
-    id: "2",
-    element: <Home />
+    path: '',
+    id: '2',
+    element: <Home />,
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
-)
+  document.getElementById('root')
+);
